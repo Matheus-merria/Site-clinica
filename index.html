@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vereda & Associados | Escritório de Advocacia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .practice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .whatsapp-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700">
+    <!-- WhatsApp Floating Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5511999999999" class="whatsapp-btn bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="mr-2 text-blue-800">
+                        <i class="fas fa-balance-scale text-2xl"></i>
+                    </div>
+                    <a href="#" class="text-xl font-bold text-blue-800">Vereda & Associados</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-blue-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-blue-800 hover:text-blue-600 font-medium">Início</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium">Sobre Nós</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium">Áreas de Atuação</a>
+                    <a href="#blog" class="text-gray-600 hover:text-blue-600 font-medium">Artigos</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium">Contato</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#home" class="block py-2 text-blue-800">Início</a>
+                <a href="#about" class="block py-2 text-gray-600">Sobre Nós</a>
+                <a href="#services" class="block py-2 text-gray-600">Áreas de Atuação</a>
+                <a href="#blog" class="block py-2 text-gray-600">Artigos</a>
+                <a href="#contact" class="block py-2 text-gray-600">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image text-white">
+        <div class="container mx-auto px-4 hero-content py-32">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">A confiança que você procura, com a experiência que você precisa.</h1>
+                <p class="text-xl mb-8">Atuamos com excelência e comprometimento para oferecer soluções jurídicas personalizadas e eficientes.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-blue-800 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium text-center transition">Agende uma consulta</a>
+                    <a href="#services" class="bg-white hover:bg-gray-100 text-blue-800 px-6 py-3 rounded-md font-medium text-center transition">Nossas especialidades</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">Sobre o Escritório</h2>
+                    <p class="text-lg mb-4">Fundado em 2005, o escritório Vereda & Associados se consolidou como referência em advocacia personalizada e de excelência.</p>
+                    <p class="text-lg mb-6">Nossa equipe multidisciplinar atua com ética, transparência e comprometimento, buscando sempre a melhor solução para cada caso.</p>
+                    <a href="#about" class="text-blue-800 font-medium hover:text-blue-600 flex items-center">
+                        Conheça nossa equipe <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Escritório de advocacia" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Áreas de Atuação</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Oferecemos expertise em diversas áreas do Direito, com atendimento personalizado e estratégico.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="practice-card bg-white rounded-lg shadow-md p-6 border border-gray-100 transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <i class="fas fa-briefcase text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Direito Empresarial</h3>
+                    <p class="text-gray-600">Assessoria jurídica completa para empresas, desde constituição até contratos complexos e recuperação judicial.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="practice-card bg-white rounded-lg shadow-md p-6 border border-gray-100 transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <i class="fas fa-user-tie text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Direito Trabalhista</h3>
+                    <p class="text-gray-600">Atuação em ações trabalhistas, assessoria em relações empregatícias e compliance trabalhista.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="practice-card bg-white rounded-lg shadow-md p-6 border border-gray-100 transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <i class="fas fa-home text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Direito Civil</h3>
+                    <p class="text-gray-600">Atendimento em questões familiares, sucessórias, contratos e responsabilidade civil com abordagem humanizada.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="practice-card bg-white rounded-lg shadow-md p-6 border border-gray-100 transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <i class="fas fa-gavel text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Direito Penal</h3>
+                    <p class="text-gray-600">Defesa criminal em todas as instâncias, habeas corpus, recursos e assessoria em inquéritos policiais.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="practice-card bg-white rounded-lg shadow-md p-6 border border-gray-100 transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <i class="fas fa-leaf text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Direito Ambiental</h3>
+                    <p class="text-gray-600">Consultoria em licenciamento ambiental, compliance e defesa em ações relacionadas ao meio ambiente.</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="practice-card bg-white rounded-lg shadow-md p-6 border border-gray-100 transition duration-300">
+                    <div class="text-blue-800 mb-4">
+                        <i class="fas fa-globe text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Direito Internacional</h3>
+                    <p class="text-gray-600">Atuação em questões transfronteiriças, contratos internacionais e arbitragem com foco em soluções globais.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="bg-blue-800 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium inline-block transition">Fale com um especialista</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Nossa Equipe</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Advogados especializados com ampla experiência em suas respectivas áreas.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dr. Carlos Vereda" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-1">Dr. Carlos Vereda</h3>
+                        <p class="text-gray-500 mb-3">Sócio Fundador - OAB/SP 123.456</p>
+                        <p class="text-gray-600 mb-4">Especialista em Direito Empresarial com mais de 25 anos de experiência. Mestre pela USP e professor convidado em diversas instituições.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Dra. Ana Lúcia Mendes" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-1">Dra. Ana Lúcia Mendes</h3>
+                        <p class="text-gray-500 mb-3">Sócia - OAB/SP 234.567</p>
+                        <p class="text-gray-600 mb-4">Especialista em Direito Trabalhista e Previdenciário. Formada pela PUC-SP com MBA em Gestão de Pessoas e Relações Trabalhistas.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dr. Ricardo Fontes" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-1">Dr. Ricardo Fontes</h3>
+                        <p class="text-gray-500 mb-3">Sócio - OAB/SP 345.678</p>
+                        <p class="text-gray-600 mb-4">Especialista em Direito Penal e Processual Penal. Ex-promotor de Justiça com vasta experiência em tribunais superiores.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">Nossos Valores</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex items-start">
+                        <div class="text-blue-800 mr-4 mt-1">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Ética</h4>
+                            <p class="text-gray-600">Atuamos com absoluta transparência e respeito aos princípios éticos da advocacia.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="text-blue-800 mr-4 mt-1">
+                            <i class="fas fa-lightbulb text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Excelência</h4>
+                            <p class="text-gray-600">Compromisso com a qualidade técnica e atualização constante em todas as áreas de atuação.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="text-blue-800 mr-4 mt-1">
+                            <i class="fas fa-heart text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Humanização</h4>
+                            <p class="text-gray-600">Atendimento personalizado, compreendendo as necessidades específicas de cada cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/News Section -->
+    <section id="blog" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Artigos e Notícias</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Fique atualizado sobre temas jurídicos relevantes e novidades do escritório.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Reforma Trabalhista" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-blue-800 text-sm mb-2">15 Jun 2023 • Direito Trabalhista</div>
+                        <h3 class="text-xl font-bold mb-3 text-blue-800">Mudanças na Reforma Trabalhista: o que você precisa saber</h3>
+                        <p class="text-gray-600 mb-4">Análise das recentes alterações na legislação trabalhista e seus impactos nas relações empregatícias.</p>
+                        <a href="#" class="text-blue-800 font-medium hover:text-blue-600 flex items-center">
+                            Ler mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="LGPD" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-blue-800 text-sm mb-2">02 Jul 2023 • Direito Digital</div>
+                        <h3 class="text-xl font-bold mb-3 text-blue-800">LGPD: como adequar sua empresa às novas exigências</h3>
+                        <p class="text-gray-600 mb-4">Guia prático para implementação da Lei Geral de Proteção de Dados em pequenas e médias empresas.</p>
+                        <a href="#" class="text-blue-800 font-medium hover:text-blue-600 flex items-center">
+                            Ler mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Herança" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-blue-800 text-sm mb-2">20 Jul 2023 • Direito de Família</div>
+                        <h3 class="text-xl font-bold mb-3 text-blue-800">Planejamento sucessório: como evitar conflitos familiares</h3>
+                        <p class="text-gray-600 mb-4">Estratégias jurídicas para organizar a transição patrimonial e minimizar disputas entre herdeiros.</p>
+                        <a href="#" class="text-blue-800 font-medium hover:text-blue-600 flex items-center">
+                            Ler mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white px-8 py-3 rounded-md font-medium inline-block transition">Ver todos os artigos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">Entre em Contato</h2>
+                    <p class="text-lg mb-8">Estamos à disposição para esclarecer dúvidas e oferecer a melhor solução para sua necessidade jurídica.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-blue-800 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Endereço</h4>
+                                <p class="text-gray-600">Av. Paulista, 1000 - 10º andar<br>Bela Vista, São Paulo - SP<br>CEP 01310-100</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-800 mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Telefone</h4>
+                                <p class="text-gray-600">(11) 9999-9999</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-800 mr-4 mt-1">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">E-mail</h4>
+                                <p class="text-gray-600">contato@veredaassociados.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-800 mr-4 mt-1">
+                                <i class="fas fa-clock text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Horário de Atendimento</h4>
+                                <p class="text-gray-600">Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 12h (com agendamento)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-lg mb-4 text-blue-800">Nos acompanhe</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-800 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-blue-800 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-blue-800 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-6">Envie sua mensagem</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nome completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-800">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-800">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-800">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                                <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-800">
+                                    <option value="">Selecione...</option>
+                                    <option value="civil">Direito Civil</option>
+                                    <option value="empresarial">Direito Empresarial</option>
+                                    <option value="trabalhista">Direito Trabalhista</option>
+                                    <option value="penal">Direito Penal</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-800"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-800 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition">Enviar mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.287482899843!2d-46.66372692415026!3d-23.55810857880164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d2b063f661%3A0xd95f5a297e2b0a4f!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1689871877685!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="mr-2">
+                            <i class="fas fa-balance-scale text-2xl"></i>
+                        </div>
+                        <div class="text-xl font-bold">Vereda & Associados</div>
+                    </div>
+                    <p class="text-blue-200">Compromisso com a sua segurança jurídica.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Navegação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-blue-200 hover:text-white transition">Início</a></li>
+                        <li><a href="#about" class="text-blue-200 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#services" class="text-blue-200 hover:text-white transition">Áreas de Atuação</a></li>
+                        <li><a href="#blog" class="text-blue-200 hover:text-white transition">Artigos</a></li>
+                        <li><a href="#contact" class="text-blue-200 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Áreas de Atuação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Direito Civil</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Direito Empresarial</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Direito Trabalhista</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Direito Penal</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Direito Ambiental</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1 text-blue-200"></i>
+                            <span class="text-blue-200">Av. Paulista, 1000 - São Paulo/SP</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-blue-200"></i>
+                            <span class="text-blue-200">(11) 9999-9999</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-200"></i>
+                            <span class="text-blue-200">contato@veredaassociados.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-blue-200 mb-4 md:mb-0">© 2023 Vereda & Associados - Todos os direitos reservados</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-blue-200 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-blue-200 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-blue-200 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission (example)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                this.reset();
+            });
+        }
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Matheusmerria/website-advocacia" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
